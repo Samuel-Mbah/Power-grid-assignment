@@ -50,15 +50,73 @@ The goal of this project is to develop, evaluate, and iteratively improve reinfo
 ## Directory Structure
 
 ```markdown
-├── results/                   # Stores results from the experiments
-│   ├── CombineScaledRewards_plots # Plot for CombinedScaledRewards
-
-├── notebooks/                 # Jupyter Notebooks for experiments and visualization
-│   ├── dqn_agent.ipynb         # Notebook for analyzing performance
-|   ├── dqn_agent.ipynb
-|   ├── dqn_agent.ipynb
-    ├── dqn_agent.ipynb
-    ├── dqn_agent.ipynb 
+├── main/                                 # Main codebase and baseline files
+│   ├── Baseline.ipynb                    # Baseline implementation notebook
+│   ├── baseline.zip                      # Compressed baseline agent files
+│   ├── CombinedScaledRewards.png         # Reward plot for baseline agent
 │
-├── README.md                  # This file
-├── requirements.txt           # Python dependencies
+├── DQN-with-new-exploration-strategy/    # Experiment with new exploration strategy (Boltzmann)
+│   ├── boltzmann_strategy.ipynb          # Notebook implementing Boltzmann exploration
+│   ├── dqn_boltzmann_agent.zip           # Compressed files for the Boltzmann DQN agent
+│   ├── CombinedRewards.png               # Reward plot for Boltzmann exploration DQN
+│
+├── DQN-with-UCB/                         # Experiment with Upper Confidence Bound (UCB)
+│   ├── dqn_ucb.ipynb                     # Notebook implementing UCB strategy
+│   ├── ucb_dqn_agent.zip                 # Compressed files for the UCB DQN agent
+│   ├── CombinedScaledRewards.png         # Reward plot for UCB DQN
+│
+├── Reward-Shaping/                       # Experiment with reward shaping for DQN
+│   ├── reward_shaping.ipynb              # Notebook with reward shaping strategy
+│   ├── dqn_grid2op_agent.zip             # Compressed files for reward-shaped DQN agent
+│   ├── CombinedScaledRewards.png         # Reward plot for reward-shaped DQN
+│
+├── DQN-with-Seeds-for-reproducibility/   # Experiment with seed-based reproducibility
+│   ├── DQN_seeds.ipynb                   # Notebook setting seeds for reproducibility
+│   ├── dqn_grid2op_agent.zip             # Compressed files for reproducible DQN agent
+│   ├── CombinedScaledRewards.png         # Reward plot for reproducible DQN
+│
+├── minimize-observations/                # Experiment minimizing observation space
+│   ├── Grid_op_assignment.ipynb          # Notebook for observation space reduction
+│   ├── dqn_grid2op_agent.zip             # Compressed files for minimized observation DQN agent
+│   ├── CombinedScaledRewards.png         # Reward plot for minimized observation DQN
+│
+├── Successive-Representation/            # Successive Representation agent implementation
+│   ├── SR_baseline.ipynb                 # Baseline implementation of SR agent
+│   ├── final-sr-w-o-hyperparameters.ipynb# Final SR agent without hyperparameter tuning
+│
+├── Final-code/                           # Final selected code and models
+│   ├── final_dqn_agent.ipynb             # Notebook for final DQN agent
+│   ├── dqn_grid2op_agent.zip             # Compressed final DQN agent files
+│   ├── dqn_boltzmann_agent.zip           # Compressed final Boltzmann exploration DQN agent
+│
+├── README.md                             # Project README file
+├── requirements.txt                      # Python dependencies
+
+```
+
+## Experimentation & Improvements
+This repository contains different branches for various improvements and experiments conducted during the project:
+
+- `main`: The main branch with the core implementations.
+- `DQN-with-new-exploration-strategy`: Implements a new exploration strategy (Boltzmann) for the DQN agent.
+- `DQN-with-UCB`: A variant of DQN with Upper Confidence Bound (UCB) for enhanced exploration.
+- `Reward-Shaping`: Custom reward shaping is introduced to guide DQN behaviour.
+- `DQN-with-Seeds-for-reproducibility`: Adds seeds for reproducibility in DQN experiments.
+- `minimize-observations`: Reduces the observation space to critical features for efficiency.
+- `Successive-Representation`: Contains experiments with a successive representation approach.
+
+
+
+## Version Control
+This project uses Git for version control, with multiple branches for different features and experiments. Use the following commands to check the available branches and switch between them:
+
+1. **List all branches:**
+    ```bash
+    git branch -a
+    ```
+2. **Switch to a specific branch:**
+    ```bash
+    git checkout <branch-name>
+    ```
+
+
