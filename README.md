@@ -24,8 +24,8 @@ The goal of this project is to develop, evaluate, and iteratively improve reinfo
 
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/your-repo-url.git
-    cd your-repo-url
+    git clone https://github.com/your-repo-url.git]
+    cd [your-repo-url](https://github.com/Samuel-Mbah/Power-grid-assignment.git)
     ```
 
 2. **Set up a virtual environment (optional but recommended):**
